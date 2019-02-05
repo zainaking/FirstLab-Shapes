@@ -16,6 +16,14 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
+    private Square trunk;
+    private Triangle tree;
+    private Square trees;
+    private Square stalk;
+    private Circle treeL;
+    private Triangle tree2;
+
 
     /**
      * Constructor for objects of class Picture
@@ -31,30 +39,87 @@ public class Picture
     public void draw()
     {
         wall = new Square();
-        wall.moveVertical(80);
-        wall.changeSize(100);
+        wall.moveVertical(100);
+        wall.changeSize(100, 100);
         wall.makeVisible();
 
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(20);
         window.moveVertical(100);
+        window.changeSize(30, 100);
         window.makeVisible();
 
         roof = new Triangle();
-        roof.changeSize(50, 140);
+        roof.changeSize(40, 140);
         roof.moveHorizontal(60);
-        roof.moveVertical(70);
+        roof.moveVertical(100);
         roof.makeVisible();
 
         sun = new Circle();
         sun.changeColor("yellow");
-        sun.moveHorizontal(180);
-        sun.moveVertical(-10);
+        sun.moveHorizontal(200);
+        sun.moveVertical(-12);
         sun.changeSize(60);
         sun.makeVisible();
-    }
+        sun2 = new Circle();
+        
+        trunk = new Square();
+        trunk.moveVertical(100);
+        trunk.moveHorizontal(100);
+        trunk.changeColor("black");
+        trunk.changeSize(20, 100);
+        trunk.makeVisible();
+        
+        tree = new Triangle();
+        tree.changeSize(50, 140);
+        tree.moveHorizontal(200);
+        tree.moveVertical(100);
+        tree.changeColor("green");
+        tree.makeVisible();
+        tree2 = new Triangle();
+        
+        
+        
+       
+       
+        trunk.moveVertical(300);
+        trunk.moveHorizontal(100);
+        trunk.changeColor("black");
+        trunk.changeSize(20, 100);
+        trunk.makeVisible();
+        
+        trees = new Square();
+        trees.moveVertical(300);
+        trees.moveHorizontal(500);
+        trees.changeColor("black");
+        trees.changeSize(20, 100);
+        trees.makeVisible();
+        
+        stalk = new Square();
+        stalk.changeColor("black");
+        stalk.moveHorizontal(175);
+        stalk.moveVertical(100);
+        stalk.makeVisible();
+        stalk.changeSize(10, 100);
+        stalk.makeVisible();
+        
+        treeL = new Circle();
+        treeL.changeSize(50);
+        treeL.moveHorizontal(200);
+        treeL.moveVertical(-180);
+        treeL.changeColor("black");
+        treeL.makeVisible();
+        
+        
+        
+        
+   
+        
+        
+       }
 
+    
     /**
      * Change this picture to black/white display
      */
